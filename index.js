@@ -17,18 +17,28 @@ const questions = () => {
         {
             type: "input",
             name: "name",
-            message: "What is the employees name?"
+            message: "What is the employee name?"
         },
         {
             type: "input",
             name: "id",
-            message: "What is the employees ID number?"
+            message: "What is the employee ID number?"
         },
         {
             type: "input",
             name: "email",
-            message: "What is the employees e-mail"
+            message: "What is the employee e-mail"
         },
+        {
+            type: "input",
+            name: "github",
+            message: "Enter employee Github username",
+            when: (answers) => {
+                if (answers.position === "Engineer") {
+                    return true;
+                }
+            }
+        }
     ])
 }
 
