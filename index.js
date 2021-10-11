@@ -38,6 +38,26 @@ const questions = () => {
                     return true;
                 }
             }
+        },
+        {
+            type: "input",
+            name: "office",
+            message: "Enter Manager's office number",
+            when: (answers) => {
+                if (answers.position === "Manager") {
+                    return true;
+                }
+            }
+        },
+        {
+            type: "input",
+            name: "school",
+            message: "Enter Intern's school",
+            when: (answers) => {
+                if (answers.position === "Intern") {
+                    return true;
+                }
+            }
         }
     ])
 }
