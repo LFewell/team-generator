@@ -1,12 +1,11 @@
-const Employee = require("./lib/Employee");
-const Engineer = require("./lib/Engineer");
-const Intern = require("./lib/Intern");
-const Manager = require("./lib/Manager");
 const template = require("./lib/htmlTemplate");
 
 const util = require("util");
 const inquirer = require("inquirer");
 const fs = require("fs");
+const Engineer = require("./lib/Engineer");
+
+let employees = [];
 
 const questions = () => {
     return inquirer.prompt([
@@ -39,6 +38,7 @@ const questions = () => {
                 if (answers.position === "Engineer") {
                     return true;
                 }
+                // addEngineer();
             }
         },
         {
@@ -63,6 +63,11 @@ const questions = () => {
         }
     ])
 }
+// -- Pushes to an array for multiple employees -- //
+// const addEngineer = (answers) => {
+//     employees.push(new Engineer(answers.name, answers.id, answers.email, answers.school));
+// }
+// console.log(employees);
 
 const writeToHTML = util.promisify(fs.writeFile);
 
