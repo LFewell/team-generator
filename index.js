@@ -65,7 +65,7 @@ const questions = () => {
 }
 // -- Pushes to an array for multiple employees -- //
 // const addEngineer = (answers) => {
-//     employees.push(new Engineer(answers.name, answers.id, answers.email, answers.school));
+//     employees.push(new Engineer(answers.name, answers.id, answers.email, answers.github));
 // }
 // console.log(employees);
 
